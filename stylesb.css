@@ -1,0 +1,340 @@
+/* Author: Aaliyah Henwood
+Date Started: 15-05-2025
+Date Completed: 26-05-2025
+Ver: 01
+*/
+
+/*
+COLOURS
+#042A2B - Dark-Green
+#5EB1BF - Moonstone
+#CDEDF6 - Light-Cyan
+#EF7B45 - Orange-Crayola
+#D84727 - Chili-Red 
+*/
+
+
+/* -- #### REFERENCES ARE AT THE BOTTOM OF THE DOCUMENT :) #### -- */
+
+
+/*GLOBAL SETTING
+----------------------------------------
+*/
+
+/* fonts used... */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+
+/* for the center content wrapped within he <main> tags */
+main{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 100px;
+}
+
+/* for the content wrapped within he <body> tags.
+    moreso for the 'main style' (font, colour, etc.).*/
+body {
+    background-color: #cdedf6;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "Quicksand", sans-serif;
+    margin: 0;
+    
+}
+
+/* START of formatting the image links wrapped with a gradient. */
+div {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    display: grid; 
+    align-items: end; 
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+a {
+    text-decoration: none;
+    /* so no links have an underline */
+}
+
+a :hover {
+    color: #EF7B45;
+}
+
+/* Within ''.food' and ''.foods' I used display: flex in
+    order to have the images become responsive on my website
+    when its width is reduced in size*/
+.food{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+
+.foods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    /* alligns all content in the center */
+}
+
+/* For the background image: linear-gradient I used hsla
+    so that the beginning gradient would be too overpowering 
+    compared to the image*/
+.gradient {
+    padding-bottom: 0;
+    width: 90.5%;
+    height: 93%;
+    position: absolute;
+    background-image: linear-gradient(to top, hsla(0, 0%, 0%, 0.72), transparent);
+    top: 0;
+    left: 0;
+    z-index: 2;
+    /* z-index is used to 'layer' the gradient over the img.*/
+}
+
+.title {
+    font-size: 20px;
+    position: absolute;
+    padding-left: 15px;
+    color: white;
+    padding-top: 325px; 
+    z-index: 3; 
+        /* z-index is used to 'layer' the text over the gradient.*/
+    font-family: "Quicksand", sans-serif;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+/* END */
+
+h2 {
+    background-color: #5EB1BF;
+    font-size: 30px;
+    color: #042A2B;
+    font-weight: 800;
+    font-family: "Bodoni Moda SC", serif;
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 25px;
+}
+
+/* HEADER
+----------------------------------------
+*/
+header {
+    background: linear-gradient(to right,#5EB1BF,#EF7B45);
+	height: 200px;
+	color: #ffffff;	
+    display: flex;
+    justify-content: center;
+}
+
+header h1 {
+	visibility: hidden;
+    position: absolute;
+}
+
+header img {
+	position: relative;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+	z-index: 1;
+    display: block;
+    margin: auto;
+}
+
+
+/* NAVIGATION BAR
+----------------------------------------
+*/
+
+nav ul {
+    list-style-type: none;
+    background-color: #042A2B;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: block;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li :hover {
+    background-color: #D84727;
+    /* When hovering over the links in the menu bar
+        the background will turn a chili red colour.*/
+}
+
+/* Paragraph Content
+----------------------------------------
+*/
+.paragraph {
+    background-color: white;
+    padding: 5px;
+}
+
+p {
+    padding: 5px;
+}
+
+.bitty {
+    font-size: 16px;
+}
+
+/* Recipe Content
+----------------------------------------
+*/
+h3 {
+    font-family: "Bodoni Moda SC", serif;
+    color: #5EB1BF;
+    padding-left: 10px;
+}
+
+h4 {
+    font-size: 20px;
+    color: white;
+    padding: 5px;
+    background-color: #D84727;
+}
+
+h5 {
+    font-size: 15px;
+}
+
+ol {
+    list-style-type: none;
+  /* To remove default numbering */
+}
+
+ol li{
+    padding: 15px;
+    background-color: white
+}
+
+ol > li:before {
+    counter-increment: mycounter;
+    content: counter(mycounter) ". ";
+}
+
+ol:first-of-type {
+    counter-reset: mycounter;
+}
+
+/* START of customisation to the external links to the indigenous
+    ingredients.*/
+.inglink {
+    color: #D84727;
+}
+
+.inglink :hover {
+    background-color: #5EB1BF;
+}
+/* END */
+
+
+/* Within '.ingredients' I used display: flex in order to 
+    have the images become responsive on my website
+    when its width is reduced in size*/
+.ingredients {
+    display: flex
+}
+
+/* FOOTER
+----------------------------------------
+*/
+
+footer {
+	font-size: 0.9em;
+    color: #ffffff;
+    background-color: #042A2B;
+    padding: 20px;
+}
+
+.footlink {
+    position: relative;
+    text-decoration: none;
+    color: #EF7B45;
+}
+
+/* unfortunately after many attempts i cannot get the hover function to work 
+    in the footer links*/
+.footlink :hover {
+    color: #5EB1BF;
+}
+
+.footlink :visited {
+    color: #D84727;
+}
+
+footer .bitty {
+    color: #5EB1BF;
+    
+}
+
+/* MEDIA QUERIES - a popular technique for tailoring websites.
+------------------------------------------
+*/
+
+@media (max-width:673px) {
+    nav a {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+
+@media (max-width:600px) {
+    nav a {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* REFERENCES:
+------------------------------------------
+(assisted with layering a gradient over my image links to recipes.)
+ByteGrad. 2022. How to add gradient overlay to image in CSS [Video]. 
+https://www.youtube.com/watch?v=5CztcrXpfec&t=13s
+
+(assisted with the simplicity and usability of my website.)
+Friedman, V. 2021. 10 principles of good web design. 
+https://www.smashingmagazine.com/2008/01/10-principles-of-effective-web-design/
+
+(assisted with making my website organised and responsive.)
+Web Dev Simplified. 2018. Learn flexbox in 15 minutes [Video].
+https://www.youtube.com/watch?v=fYq5PXgSsbE&t=623s
+
+(assisted with centering my top nav bar.)
+Web Master. 2020. Center align navigation menus with HTML and CSS : For Beginner [Video].
+https://www.youtube.com/watch?v=R5aRUdM7Iio
+
+(assisted with creating rounded textboxes for titles and my logo.)
+W3Schools. 1999-2025. CSS rounded corners. 
+https://www.w3schools.com/css/default.asp
+
+
+*/
